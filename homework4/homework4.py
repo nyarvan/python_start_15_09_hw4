@@ -1,19 +1,11 @@
 import random
-from math import pi
 
 if __name__ == '__main__':
     print("Exercise 1:")
     x = random.randrange(1000, 9999)
     lst = list(str(x))
     res = list(map(int, lst))
-    res1, res2, i= 0, 0, 0
-    while i < len(res)//2:
-         res1 += res[i]
-         i += 1
-    i = 0
-    while i < len(res)//2:
-        res2 += res[len(res) - 1 - i]
-        i += 1
+    res1, res2 = sum(res[:len(res)//2]), sum(res[-1:-len(res)//2 - 1:-1])
     if not len(res) % 2 and res1 == res2:
         print(x, "is lucky number!")
     else:
@@ -21,14 +13,7 @@ if __name__ == '__main__':
     x = 5564
     lst = list(str(x))
     res = list(map(int, lst))
-    res1, res2, i= 0, 0, 0
-    while i < len(res)//2:
-         res1 += res[i]
-         i += 1
-    i = 0
-    while i < len(res)//2:
-        res2 += res[len(res) - 1 - i]
-        i += 1
+    res1, res2 = sum(res[:len(res)//2]), sum(res[-1:-len(res)//2 - 1:-1])
     if not len(res) % 2 and res1 == res2:
         print(x, "is lucky number!")
     else:
@@ -36,14 +21,7 @@ if __name__ == '__main__':
     x = input("Input number: ")
     lst = list(x)
     res = list(map(int, lst))
-    res1, res2, i= 0, 0, 0
-    while i < len(res)//2:
-         res1 += res[i]
-         i += 1
-    i = 0
-    while i < len(res)//2:
-        res2 += res[len(res) - 1 - i]
-        i += 1
+    res1, res2 = sum(res[:len(res)//2]), sum(res[-1:-len(res)//2 - 1:-1])
     if not len(res) % 2 and res1 == res2:
         print(x, "is lucky number!")
     else:
